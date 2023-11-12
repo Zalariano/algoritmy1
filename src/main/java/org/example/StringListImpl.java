@@ -144,6 +144,6 @@ public class StringListImpl implements StringList {
 
     @Override
     public String[] toArray() {
-        return Arrays.copyOf(storage, size);
+        return Arrays.copyOf(storage,  size);
     }
 }
