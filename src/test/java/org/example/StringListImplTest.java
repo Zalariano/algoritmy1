@@ -18,7 +18,7 @@ class StringListImplTest {
     @org.junit.jupiter.api.Test
     void add_StorageIsFullException() {
         setUp();
-        stringListImpl.add("9");
+        stringListImpl.add("9 ");
         assertThrows(StorageIsFullException.class, () -> stringListImpl.add("9"));
     }
     @org.junit.jupiter.api.Test
