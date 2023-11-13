@@ -76,6 +76,6 @@ public interface StringList {
         // Создать новый массив
         // из строк в списке
         // и вернуть его.
-        String[] toArray();
+         String[] toArray();
     }
 

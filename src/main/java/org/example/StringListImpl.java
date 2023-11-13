@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.Exception.ElementNotFoundException;
 import org.example.Exception.InvalidIndexException;
 import org.example.Exception.NullItemException;
 import org.example.Exception.StorageIsFullException;
@@ -13,7 +12,7 @@ public class StringListImpl implements StringList {
     private int size;
 
     public StringListImpl() {
-        storage = new String[2];
+        storage = new String[4];
     }
 
     public StringListImpl(int initSize) {
@@ -33,7 +32,7 @@ public class StringListImpl implements StringList {
     }
 
     private void validateIndex(int index) {
-        if (index < 0 || index >= size) {
+        if (index < 0 || index > size) {
             throw new InvalidIndexException();
         }
     }
@@ -144,6 +143,6 @@ public class StringListImpl implements StringList {
 
     @Override
     public String[] toArray() {
-        return Arrays.copyOf(storage, size);
+        return Arrays.copyOf(storage,  size);
     }
 }
